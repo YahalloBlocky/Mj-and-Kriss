@@ -602,9 +602,10 @@ body::before {
 
 @media (max-width: 640px) {
     #music-player {
-        bottom: 16px;
-        right: 16px;
-        width: 220px;
-        padding: 12px 14px;
+        top: 12px;
+        right: 12px;
+        left: 12px;
+        width: auto;
+        padding: 10px 12px;
     }
 }
