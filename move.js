@@ -1,5 +1,5 @@
 // ── Password check ──
-const CORRECT = 'mjheartkriss';
+const CORRECT = 'iloveyou';
 
 function checkPassword() {
     const input = document.getElementById('password-input').value.trim();
