@@ -10,8 +10,6 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="design.css">
   <link rel="icon" href="heart.png">
-
-
 </head>
 
 <body>
@@ -27,6 +25,27 @@
     </div>
   </div>
 
+  <!-- ═══ MUSIC PLAYER ═══ -->
+  <div id="music-player">
+    <div class="player-info">
+      <span class="player-note">🎵</span>
+      <div class="player-text">
+        <span id="song-title">Soft Spot</span>
+        <span id="song-artist">keshi</span>
+      </div>
+    </div>
+    <div class="player-controls">
+      <button class="ctrl-btn" onclick="prevSong()">⏮</button>
+      <button class="ctrl-btn play" id="play-btn" onclick="togglePlay()">⏸</button>
+      <button class="ctrl-btn" onclick="nextSong()">⏭</button>
+    </div>
+    <div class="player-progress">
+      <span id="current-time">0:00</span>
+      <input type="range" id="progress-bar" value="0" min="0" max="100" oninput="seek(this.value)" />
+      <span id="duration">0:00</span>
+    </div>
+  </div>
+
   <!-- ═══ ALBUM ═══ -->
   <div id="album">
 
@@ -39,7 +58,7 @@
 
     <div class="photo-grid">
 
-      <!-- ── CARD 1 ── Replace src with your image path, e.g. src="photos/photo1.jpg" -->
+      <!-- ── CARD 1 ── -->
       <div class="photo-card">
         <div class="polaroid">
           <img class="polaroid-img" src="hehe.jfif" alt="Our first photo" />
@@ -47,10 +66,10 @@
         </div>
         <div class="caption-box">
           <span class="caption-number">01</span>
-          <h2 class="caption-title"> Welcome back, my love. </h2>
+          <h2 class="caption-title">Welcome back, my love.</h2>
           <p class="caption-date">March 27, 2026</p>
           <p class="caption-text">
-           The day we got back together. We got to see each other again and spent time catching up. Then went to photoism:>  ♡
+            The day we got back together. We got to see each other again and spent time catching up. Then went to photoism:> ♡
           </p>
           <span class="caption-tag">#kambakisreyal</span>
         </div>
@@ -67,11 +86,9 @@
         </div>
         <div class="caption-box">
           <span class="caption-number">02</span>
-          <h2 class="caption-title">title </h2>
+          <h2 class="caption-title">title</h2>
           <p class="caption-date">date</p>
-          <p class="caption-text">
-           caption ♡
-          </p>
+          <p class="caption-text">caption ♡</p>
           <span class="caption-tag"># your tag</span>
         </div>
       </div>
@@ -87,48 +104,41 @@
         </div>
         <div class="caption-box">
           <span class="caption-number">03</span>
-         <h2 class="caption-title">title </h2>
+          <h2 class="caption-title">title</h2>
           <p class="caption-date">date</p>
-          <p class="caption-text">
-           caption ♡
-          </p>
+          <p class="caption-text">caption ♡</p>
           <span class="caption-tag"># your tag</span>
         </div>
       </div>
 
-    
+      <!--
+      TO ADD MORE PHOTOS, copy this block:
 
-        <!--
-    ════════════════════════════════════
-    TO ADD MORE PHOTOS, copy this block:
-    ════════════════════════════════════
-
-    <div class="photo-card">
-      <div class="polaroid">
-        <img class="polaroid-img" src="photos/photoX.jpg" alt="description" />
-        <span class="sticker">🍓</span>
+      <div class="photo-card">
+        <div class="polaroid">
+          <img class="polaroid-img" src="photos/photoX.jpg" alt="description" />
+          <span class="sticker">🍓</span>
+        </div>
+        <div class="caption-box">
+          <span class="caption-number">04</span>
+          <h2 class="caption-title">Your Title</h2>
+          <p class="caption-date">Month Day, Year</p>
+          <p class="caption-text">Your caption here ♡</p>
+          <span class="caption-tag"># tag</span>
+        </div>
       </div>
-      <div class="caption-box">
-        <span class="caption-number">06</span>
-        <h2 class="caption-title">Your Title</h2>
-        <p class="caption-date">Month Day, Year</p>
-        <p class="caption-text">Your caption here ♡</p>
-        <span class="caption-tag"># tag</span>
-      </div>
-    </div>
-    -->
-
-      </div>
-
-      <footer class="album-footer">
-        <p class="heart-line">MJ ♡ Kriss</p>
-        <p>May our story never end:)</p>
-      </footer>
+      -->
 
     </div>
 
-    <script src="move.js">
-    </script>
+    <footer class="album-footer">
+      <p class="heart-line">MJ ♡ Kriss</p>
+      <p>May our story never end:)</p>
+    </footer>
+
+  </div>
+
+  <script src="move.js"></script>
 </body>
 
 </html>
