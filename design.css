@@ -479,19 +479,24 @@ body::before {
 #music-player {
     display: none;
     position: fixed;
-    top: 24px;
-    right: 24px;
+    top: 16px;
+    right: 16px;
     z-index: 999;
     background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(16px);
     border: 1.5px solid var(--pink-soft);
     border-radius: 20px;
-    padding: 14px 18px;
+    padding: 10px 14px;
     box-shadow: 0 8px 32px rgba(230, 57, 80, 0.15), 0 2px 8px rgba(0,0,0,0.06);
-    width: 260px;
+    width: 220px;
     animation: slideUp 0.5s ease;
+    cursor: grab;
+    user-select: none;
 }
 
+#music-player:active {
+    cursor: grabbing;
+}
 #music-player.visible { display: block; }
 
 @keyframes slideUp {
