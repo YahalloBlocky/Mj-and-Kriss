@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MJ & Kriss 🍓</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&family=Dancing+Script:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="design.css">
+
+
+</head>
+
+<body>
+
+  <!-- ═══ PASSWORD SCREEN ═══ -->
+  <div id="password-screen">
+    <div class="lock-card">
+      <h1>Our little place 🍓</h1>
+      <p>Enter the secret password to open ♡</p>
+      <input id="password-input" type="password" placeholder="type the password..." autocomplete="off" />
+      <button id="unlock-btn" onclick="checkPassword()">Open ♡</button>
+      <p id="error-msg">wrong password, try again 🍓</p>
+    </div>
+  </div>
+
+  <!-- ═══ ALBUM ═══ -->
+  <div id="album">
+
+    <header class="album-header">
+      <span class="strawberry-deco">🍓 🍓 🍓</span>
+      <h1>MJ & Kriss</h1>
+      <p class="subtitle">a little collection of us ♡</p>
+      <div class="divider">🍓</div>
+    </header>
+
+    <div class="photo-grid">
+
+      <!-- ── CARD 1 ── Replace src with your image path, e.g. src="photos/photo1.jpg" -->
+      <div class="photo-card">
+        <div class="polaroid">
+          <img class="polaroid-img" src="photos/dog.png" alt="Our first photo" />
+          <span class="sticker">🍓</span>
+        </div>
+        <div class="caption-box">
+          <span class="caption-number">01</span>
+          <h2 class="caption-title">Write your title here</h2>
+          <p class="caption-date">Month Day, Year</p>
+          <p class="caption-text">
+            Write your caption / description here. Tell the story of this photo — where you were,
+            how you felt, what made it special. This is your little diary entry for this memory. ♡
+          </p>
+          <span class="caption-tag"># your tag</span>
+        </div>
+      </div>
+
+      <!-- ── CARD 2 ── -->
+      <div class="photo-card">
+        <div class="polaroid">
+          <div class="polaroid-img placeholder">
+            💕
+            <span>add photo here</span>
+          </div>
+          <span class="sticker">✨</span>
+        </div>
+        <div class="caption-box">
+          <span class="caption-number">02</span>
+          <h2 class="caption-title">Write your title here</h2>
+          <p class="caption-date">Month Day, Year</p>
+          <p class="caption-text">
+            Write your caption / description here. Tell the story of this photo — where you were,
+            how you felt, what made it special. ♡
+          </p>
+          <span class="caption-tag"># your tag</span>
+        </div>
+      </div>
+
+      <!-- ── CARD 3 ── -->
+      <div class="photo-card">
+        <div class="polaroid">
+          <div class="polaroid-img placeholder">
+            🍓
+            <span>add photo here</span>
+          </div>
+          <span class="sticker">💖</span>
+        </div>
+        <div class="caption-box">
+          <span class="caption-number">03</span>
+          <h2 class="caption-title">Write your title here</h2>
+          <p class="caption-date">Month Day, Year</p>
+          <p class="caption-text">
+            Write your caption / description here. Tell the story of this photo — where you were,
+            how you felt, what made it special. ♡
+          </p>
+          <span class="caption-tag"># your tag</span>
+        </div>
+      </div>
+
+      <!-- ── CARD 4 ── -->
+      <div class="photo-card">
+        <div class="polaroid">
+          <div class="polaroid-img placeholder">
+            🌷
+            <span>add photo here</span>
+          </div>
+          <span class="sticker">🍓</span>
+        </div>
+        <div class="caption-box">
+          <span class="caption-number">04</span>
+          <h2 class="caption-title">Write your title here</h2>
+          <p class="caption-date">Month Day, Year</p>
+          <p class="caption-text">
+            Write your caption / description here. Tell the story of this photo — where you were,
+            how you felt, what made it special. ♡
+          </p>
+          <span class="caption-tag"># your tag</span>
+        </div>
+      </div>
+
+      <!-- ── CARD 5 ── -->
+      <div class="photo-card">
+        <div class="polaroid">
+          <div class="polaroid-img placeholder">
+            💌
+            <span>add photo here</span>
+          </div>
+          <span class="sticker">🌸</span>
+        </div>
+        <div class="caption-box">
+          <span class="caption-number">05</span>
+          <h2 class="caption-title">Write your title here</h2>
+          <p class="caption-date">Month Day, Year</p>
+          <p class="caption-text">
+            Write your caption / description here. Tell the story of this photo — where you were,
+            how you felt, what made it special. ♡
+          </p>
+          <span class="caption-tag"># your tag</span>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="photo-card">
+        <div class="polaroid">
+          <img class="polaroid-img" src="photos/photoX.jpg" alt="description" />
+          <span class="sticker">🍓</span>
+        </div>
+        <div class="caption-box">
+          <span class="caption-number">06</span>
+          <h2 class="caption-title">Your Title</h2>
+          <p class="caption-date">Month Day, Year</p>
+          <p class="caption-text">Your caption here ♡</p>
+          <span class="caption-tag"># tag</span>
+        </div>
+
+        <!--
+    ════════════════════════════════════
+    TO ADD MORE PHOTOS, copy this block:
+    ════════════════════════════════════
+
+    <div class="photo-card">
+      <div class="polaroid">
+        <img class="polaroid-img" src="photos/photoX.jpg" alt="description" />
+        <span class="sticker">🍓</span>
+      </div>
+      <div class="caption-box">
+        <span class="caption-number">06</span>
+        <h2 class="caption-title">Your Title</h2>
+        <p class="caption-date">Month Day, Year</p>
+        <p class="caption-text">Your caption here ♡</p>
+        <span class="caption-tag"># tag</span>
+      </div>
+    </div>
+    -->
+
+      </div>
+
+      <footer class="album-footer">
+        <p class="heart-line">MJ ♡ Kriss</p>
+        <p>May our story never stop:)</p>
+      </footer>
+
+    </div>
+
+    <script src="move.js">
+    </script>
+</body>
+
+</html>
