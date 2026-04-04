@@ -52,8 +52,8 @@ function spawnBerries() {
 
 // ── Music Player ──
 const songs = [
-    { src: 'songs2/Soft_Spot_-_Keshi.mp3', title: 'Soft Spot', artist: 'keshi' },
-    { src: 'songs2/UNDERSTAND_-_Keshi.mp3', title: 'UNDERSTAND', artist: 'keshi' }
+    { src: 'songs2/Soft Spot - Keshi.mp3', title: 'Soft Spot', artist: 'keshi' },
+    { src: 'songs2/UNDERSTAND - Keshi.mp3', title: 'UNDERSTAND', artist: 'keshi' }
 ];
 
 let currentIndex = 0;
