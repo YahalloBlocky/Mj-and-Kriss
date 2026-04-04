@@ -479,7 +479,7 @@ body::before {
 #music-player {
     display: none;
     position: fixed;
-    bottom: 24px;
+    top: 24px;
     right: 24px;
     z-index: 999;
     background: rgba(255, 255, 255, 0.88);
