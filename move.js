@@ -52,8 +52,8 @@ function spawnBerries() {
 
 // ── Music Player ──
 const songs = [
-    { src: 'songs2/UNDERSTAND - Keshi.mp3', title: 'UNDERSTAND', artist: 'keshi' },
-    { src: 'songs2/Soft Spot - Keshi.mp3', title: 'Soft Spot', artist: 'keshi' }
+    { src: 'songs2/Soft Spot - Keshi.mp3', title: 'Soft Spot', artist: 'keshi' },
+    { src: 'songs2/UNDERSTAND - Keshi.mp3', title: 'UNDERSTAND', artist: 'keshi' }
 ];
 
 let currentIndex = 0;
@@ -117,10 +117,7 @@ function prevSong() {
     if (isPlaying) audio.play();
 }
 
-// auto play next when song ends
 audio.addEventListener('ended', nextSong);
-
-// progress bar
 audio.addEventListener('timeupdate', updateProgress);
 
 function updateProgress() {
@@ -148,39 +145,45 @@ function formatTime(s) {
 
 // ── Draggable player ──
 const player = document.getElementById('music-player');
-let dragging = false, startX, startY, origX, origY;
+let dragging = false;
+let startX, startY, origX, origY;
 
 player.addEventListener('mousedown', e => {
     if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') return;
     dragging = true;
-    startX = e.clientX; startY = e.clientY;
-    origX = player.offsetLeft; origY = player.offsetTop;
+    startX = e.clientX;
+    startY = e.clientY;
+    origX = player.offsetLeft;
+    origY = player.offsetTop;
     player.style.right = 'auto';
+    player.style.bottom = 'auto';
 });
 
 document.addEventListener('mousemove', e => {
     if (!dragging) return;
     player.style.left = (origX + e.clientX - startX) + 'px';
-    player.style.top  = (origY + e.clientY - startY) + 'px';
+    player.style.top = (origY + e.clientY - startY) + 'px';
 });
 
-document.addEventListener('mouseup', () => dragging = false);
+document.addEventListener('mouseup', () => { dragging = false; });
 
-// touch support
 player.addEventListener('touchstart', e => {
     if (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') return;
     const t = e.touches[0];
     dragging = true;
-    startX = t.clientX; startY = t.clientY;
-    origX = player.offsetLeft; origY = player.offsetTop;
+    startX = t.clientX;
+    startY = t.clientY;
+    origX = player.offsetLeft;
+    origY = player.offsetTop;
     player.style.right = 'auto';
-});
+    player.style.bottom = 'auto';
+}, { passive: true });
 
 document.addEventListener('touchmove', e => {
     if (!dragging) return;
     const t = e.touches[0];
     player.style.left = (origX + t.clientX - startX) + 'px';
-    player.style.top  = (origY + t.clientY - startY) + 'px';
-});
+    player.style.top = (origY + t.clientY - startY) + 'px';
+}, { passive: true });
 
-document.addEventListener('touchend', () => dragging = false);
+document.addEventListener('touchend', () => { dragging = false; });
